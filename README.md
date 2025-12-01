@@ -6,15 +6,24 @@ Proje, dış bir Booking API servisinden aldığı verileri kullanıcıya modern
 
 :rocket: Özellikler
 ______________________________________________________________________________________________________________________________________________________________________
-:mag_right: Otel Arama
+Ana Sayfa
 
-* Şehir, giriş–çıkış tarihleri, kişi ve oda sayısına göre arama
-* API’dan gelen otellerin listelenmesi
-* Her otel kartında:
-   * İsim
-   * Fotoğraf
-   * Puan ve yorum özeti
-   * "Otel Detaylarını Gör" butonu
+ * Şehir seçimi
+ * Giriş ve Çıkış Tarihi
+ * Yetişkin Sayısı
+ * Oda Sayısı
+ * "Otel Ara" butonu
+Girilen kriterlere göre oteller listelenirç Liste Sayfasında:
+  * Otel Adı
+  * Otel Fotoğrafı
+  * Otel gecelik ücreti
+  * Detaylara Git butonu yer alır.  
+Detay Sayfası
+Her Otelin detay sayfasında:
+  * Otele ait fotoğraflar
+  * Açıklama
+  * Değerlendirme ve puanlar
+  * Yorumlar
  
 :hammer: Kullanılan Teknolojiler
 ___________________________________________________________________________________
