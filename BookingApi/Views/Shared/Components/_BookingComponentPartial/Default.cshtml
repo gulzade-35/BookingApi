@@ -1,0 +1,66 @@
+﻿<section class="ftco-booking">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form asp-controller="Booking" asp-action="Index" method="post" class="booking-form">
+                    <div class="row">
+                        <div class="col-md-2 d-flex">
+                            <div class="form-group p-3 align-self-stretch d-flex align-items-end">
+                                <div class="wrap">
+                                    <label for="city">Şehir</label>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="Şehir" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex">
+                            <div class="form-group p-4 align-self-stretch d-flex align-items-end">
+                                <div class="wrap">
+                                    <label for="CheckIn">Giriş Tarihi</label>
+                                    <input type="date" id="CheckIn" name="CheckIn" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 d-flex">
+                            <div class="form-group p-4 align-self-stretch d-flex align-items-end">
+                                <div class="wrap">
+                                    <label for="CheckOut">Çıkış Tarihi</label>
+                                    <input type="date" id="CheckOut" name="CheckOut" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md d-flex">
+                            <div class="form-group p-3 align-self-stretch d-flex align-items-end">
+                                <div class="wrap">
+                                    <label for="adults">Yetişkin</label>
+                                    <input type="number" id="adults" name="adults" value="1" min="1" max="10" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md d-flex">
+                            <div class="form-group p-3 align-self-stretch d-flex align-items-end">
+                                <div class="wrap">
+                                    <label for="rooms">Oda</label>
+                                    <input type="number" id="rooms" name="rooms" value="1" min="1" max="5" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md d-flex">
+                            <div class="form-group d-flex align-self-stretch">
+                                <button type="submit"  class="btn btn-primary py-3 px-4"> Otel Ara </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .booking-form{
+        background:white;
+        position:relative;
+        padding:20px;
+        border-radius:5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+</style>

@@ -1,0 +1,32 @@
+﻿@model List<BookingApiViewModel.Hotel>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    @await Component.InvokeAsync("_HeadComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_NavbarComponentPartial")
+  
+    @await Component.InvokeAsync("_SliderComponentPartial")
+
+    @await Component.InvokeAsync("_BookingComponentPartial")
+
+    @await Component.InvokeAsync("_AboutComponentPartial")
+ 
+    @await Component.InvokeAsync("_ServiceComponentPartial")
+
+    @await Component.InvokeAsync("_RoomsComponentPartial")
+
+    @await Component.InvokeAsync("_FooterComponentPartial")
+
+    @await Component.InvokeAsync("_ScriptComponentPartial")
+   
+</body>
+</html>

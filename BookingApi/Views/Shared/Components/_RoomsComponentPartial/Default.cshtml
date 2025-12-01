@@ -1,0 +1,83 @@
+﻿@model List<BookingApiViewModel.Hotel>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h2 class="mb-4">Odalarımız</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            @if (Model == null || !Model.Any())
+            {
+                <div class="col-12 text-center">
+                    <p>Herhangi bir otel bulunamadı.</p>
+                </div>
+            }
+            else
+            {
+                foreach (var item in Model)
+                {
+                    var property = item?.property;
+                    var price = property?.priceBreakdown?.grossPrice;
+                    var photo = property?.photoUrls?.FirstOrDefault() ?? "/img/default.jpg";
+                    var name = property?.name ?? "Bilinmeyen Otel";
+                    var accessibilityLabel = item?.accessibilityLabel ?? "No description";
+
+ 
+
+                    <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                        <div class="room">
+
+                            <a class="img d-flex justify-content-center align-items-center"
+                               style="background-image: url('@photo');">
+                                <div class="icon d-flex justify-content-center align-items-center">
+                                    <span class="icon-search2"></span>
+                                </div>
+                            </a>
+
+                            <div class="text p-3 text-center">
+                                <h3 class="mb-3">@name</h3>
+
+                                @if (price?.value > 0)
+                                {
+                                    <p>
+                                        <span class="price mr-2">
+                                            $@price.value @price.currency
+                                        </span>
+                                        <span class="per">gecelik</span>
+                                    </p>
+                                }
+                                else
+                                {
+                                    <p><span class="price mr-2">Fiyat mevcut değil</span></p>
+                                }
+
+                                <hr />
+
+                                <p class="pt-1">
+                                   <a href="@Url.Action("HotelDetails", "Booking", new { 
+                                          hotelName = name,
+                                           imageUrl = property.photoUrls.ToList(), // string[] → List<string>
+                                          label = accessibilityLabel,
+                                          reviewScore = property.reviewScore,
+                                          reviewCount = property.reviewCount,
+                                          reviewWord = property.reviewScoreWord
+                                          })"                                       
+                                          class="btn-custom">
+                                  Otel Detaylarını Gör <span class="icon-long-arrow-right"></span>
+                                  </a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            }
+
+
+        </div>
+
+    </div>
+</section>
