@@ -7,7 +7,7 @@ Proje, dış bir Booking API servisinden aldığı verileri kullanıcıya modern
 :rocket: Özellikler
 ______________________________________________________________________________________________________________________________________________________________________
 
-##Ana Sayfa
+**Ana Sayfa**
 
  * Şehir seçimi
  * Giriş ve Çıkış Tarihi
@@ -16,11 +16,14 @@ ________________________________________________________________________________
  * "Otel Ara" butonu
 
  Girilen kriterlere göre oteller listelenirç Liste Sayfasında:
+ 
   * Otel Adı
   * Otel Fotoğrafı
   * Otel gecelik ücreti
-  * Detaylara Git butonu yer alır.  
-##Detay Sayfası
+  * Detaylara Git butonu yer alır.
+  * 
+**Detay Sayfası**
+
 Her Otelin detay sayfasında:
   * Otele ait fotoğraflar
   * Açıklama
