@@ -44,7 +44,7 @@ namespace BookingApi.Controllers
                         $"&location=US"),
                     Headers =
             {
-                { "x-rapidapi-key", "321e807614mshc61203873d714bcp1c727djsna7a210425489" },
+                { "x-rapidapi-key", "******************************************" },
                 { "x-rapidapi-host", "booking-com15.p.rapidapi.com" },
             },
                 };
@@ -85,7 +85,7 @@ namespace BookingApi.Controllers
                     RequestUri = new Uri($"https://booking-com15.p.rapidapi.com/api/v1/hotels/searchDestination?query={city}"),
                     Headers =
             {
-                { "x-rapidapi-key", "321e807614mshc61203873d714bcp1c727djsna7a210425489" },
+                { "x-rapidapi-key", "*****************************************" },
                 { "x-rapidapi-host", "booking-com15.p.rapidapi.com" },
             },
                 };
